@@ -18,28 +18,64 @@ The data are reformatted into a json file containing the zero shot and one shot 
   - broadContextPosition :
   - broadContextPositionFirst :
 
+### Example
+```
+{
+ 
+}
+```
+
 
 ## Classification scripts
 
 ### Script Options
 
-Input options :
-- tagged : boolean
--
-- occurrences :
-- pair input :
-
 Model parameters :
+- number of epochs
+- batch size
 - max sequence length
-- 
+- learning rate
 
-Model id :
--
--
--
+Model:
+- --lingsplit : train one classifier per language, <boolean>. If false, main model is used.
+- -m : main model name
+- -id : main model id
+- -eid : english model name
+- -pid : portuguese model name
+- -gid : galician model name
+
+
+Input options :
+- -p :pair input <boolean>
+- -t : tagged <boolean>
+- -o : occurrences <multiple, first>
+
+
 
 
 ### Examples 
 
-- Monolingual :
-- Multilingual :
+
+ 
+```
+python3 classify.py 4 16 512 -m roberta -id xlm-roberta-large -p -c sentence -o first -t
+python3 classify.py 3 8 350 -m bert -id bert-base-cased -p -c sentence -o first -t --lingsplit
+```
+- Experiment 1
+```
+python3 completed_classif.py 3 8 512 4e-05 -m xlmroberta -id xlm-roberta-base -p -c sentence -o multiple  --seeds 1,2,3 --shuffle 1
+python3 completed_classif.py 3 8 512 4e-05 -m xlmroberta -id xlm-roberta-base -p -c sentence -o multiple  --seeds 1,2,3 --shuffle 2
+python3 completed_classif.py 3 8 512 4e-05 -m xlmroberta -id xlm-roberta-base -p -c sentence -o multiple  --seeds 1,2,3 --shuffle 3
+
+python3 completed_classif.py 1 64 128 4e-05 -m bert -id bert-base-multilingual-cased -p -c sentence -o multiple -t --seeds 1,2,3 --shuffle 1    
+python3 completed_classif.py 1 64 128 4e-05 -m bert -id bert-base-multilingual-cased -p -c sentence -o multiple -t --seeds 1,2,3 --shuffle 2 
+python3 completed_classif.py 1 64 128 4e-05 -m bert -id bert-base-multilingual-cased -p -c sentence -o multiple -t --seeds 1,2,3 --shuffle 3  
+```
+- Experiment 2
+```
+```
+- Experiment 3
+```
+```
+
+
