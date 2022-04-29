@@ -117,7 +117,7 @@ python3 classifier.py 1 64 128 4e-05 -m bert -id bert-base-multilingual-cased -p
 	
 - Experiment 2
 	
-``
+```
 python3 classifier.py 3 8 512 4e-05 -m xlmroberta -id xlm-roberta-base -p -c sentence -o multiple  --seeds 1,2,3 --shuffle 1 
 python3 classifier.py 3 8 512 4e-05 -m xlmroberta -id xlm-roberta-base -p -c paragraph -o multiple  --seeds 1,2,3 --shuffle 1    
 python3 classifier.py 3 8 512 4e-05 -m xlmroberta -id xlm-roberta-base -c sentence -o multiple  --seeds 1,2,3 --shuffle 1 
@@ -127,9 +127,12 @@ python3 classifier.py 3 8 512 4e-05 -m xlmroberta -id xlm-roberta-base -c paragr
 - Experiment 3
 	
 ```
+python3 classifier.py	
 	
 ```
+	
 - Experiment 4
-```
 	
+```
+python3 classifier.py	
 ```
