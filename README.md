@@ -21,7 +21,55 @@ The data are reformatted into a json file containing the zero shot and one shot 
 ### Example
 ```
 {
- 
+			"id": "train_zero_shot.EN.47.1",
+			"corpus": "semevalZeroShot",
+			"context": "Even though there were no judges, parents, or spotlight of being on the stage, Hasbrouck Heights Middle School sixth grader Enric Soni won the annual spelling bee by answering 39 of 40 questions correctly.",
+			"expression": "spelling bee",
+			"label": "1",
+			"position": [
+				[
+					150,
+					162
+				]
+			],
+			"dataSplit": "train",
+			"expression_cased": "spelling bee"
+			"additionalInformation": {
+				"context": {
+					"nextSentence": "He will move on to represent Hasbrouck Heights in the North Jersey Spelling Bee.The North Jersey Spelling Bee will include the counties of Bergen and Passaic only, according to the event's website.",
+					"previousSentence": "This year's spelling bee was done virtually as an online test through the Scripps National Spelling Bee program, according to Hasbrouck Heights Middle School Social Studies teacher James Muska, who organizes the event."
+				},
+				"language": "EN",
+				"setting": "zero_shot",
+				"semID": "train_zero_shot.EN.47.1",
+				"broadContext": "This year's spelling bee was done virtually as an online test through the Scripps National Spelling Bee program, according to Hasbrouck Heights Middle School Social Studies teacher James Muska, who organizes the event. Even though there were no judges, parents, or spotlight of being on the stage, Hasbrouck Heights Middle School sixth grader Enric Soni won the annual spelling bee by answering 39 of 40 questions correctly. He will move on to represent Hasbrouck Heights in the North Jersey Spelling Bee.The North Jersey Spelling Bee will include the counties of Bergen and Passaic only, according to the event's website.",
+				"positionBroadContext": [
+					[
+						12,
+						24
+					],
+					[
+						91,
+						103
+					],
+					[
+						369,
+						381
+					],
+					[
+						492,
+						504
+					],
+					[
+						522,
+						534
+					]
+				],
+				"firstPositionBroadContext": [
+					369,
+					381
+				]
+			},
 }
 ```
 
